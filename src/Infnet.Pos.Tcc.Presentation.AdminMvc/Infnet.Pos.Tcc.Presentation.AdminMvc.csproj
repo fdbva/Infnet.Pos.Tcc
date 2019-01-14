@@ -16,4 +16,9 @@
     </PackageReference>
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infnet.Pos.Tcc.Infrastructure.IoC\Infnet.Pos.Tcc.Infrastructure.IoC.csproj" />
+  </ItemGroup>
+
 </Project>

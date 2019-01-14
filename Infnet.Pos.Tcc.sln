@@ -11,17 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{88A5DBC9-6FA1-4B75-A4E9-D313911E0976}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infnet.Pos.Tcc.Presentation.AdminMvc", "src\Infnet.Pos.Tcc.Presentation.AdminMvc\Infnet.Pos.Tcc.Presentation.AdminMvc.csproj", "{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infnet.Pos.Tcc.Presentation.AdminMvc", "src\Infnet.Pos.Tcc.Presentation.AdminMvc\Infnet.Pos.Tcc.Presentation.AdminMvc.csproj", "{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infnet.Pos.Tcc.Infrastructure.CrossCutting", "src\Infnet.Pos.Tcc.Infrastructure.CrossCutting\Infnet.Pos.Tcc.Infrastructure.CrossCutting.csproj", "{C2F17CA0-6637-4BA9-A038-4E86114E5C54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infnet.Pos.Tcc.Infrastructure.CrossCutting", "src\Infnet.Pos.Tcc.Infrastructure.CrossCutting\Infnet.Pos.Tcc.Infrastructure.CrossCutting.csproj", "{C2F17CA0-6637-4BA9-A038-4E86114E5C54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infnet.Pos.Tcc.Infrastructure.Data", "src\Infnet.Pos.Tcc.Infrastructure.Data\Infnet.Pos.Tcc.Infrastructure.Data.csproj", "{67151AE8-267B-47DD-B3B6-4F508317EDE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infnet.Pos.Tcc.Infrastructure.Data", "src\Infnet.Pos.Tcc.Infrastructure.Data\Infnet.Pos.Tcc.Infrastructure.Data.csproj", "{67151AE8-267B-47DD-B3B6-4F508317EDE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infnet.Pos.Tcc.Domain.Service", "src\Infnet.Pos.Tcc.Domain.Service\Infnet.Pos.Tcc.Domain.Service.csproj", "{6E1D323B-B2A9-4032-A86B-7A3218E77E56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infnet.Pos.Tcc.Domain.Service", "src\Infnet.Pos.Tcc.Domain.Service\Infnet.Pos.Tcc.Domain.Service.csproj", "{6E1D323B-B2A9-4032-A86B-7A3218E77E56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infnet.Pos.Tcc.Domain.Model", "src\Infnet.Pos.Tcc.Domain.Model\Infnet.Pos.Tcc.Domain.Model.csproj", "{5BFBB082-282C-4BF6-90B5-B6DA0D3EC37E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infnet.Pos.Tcc.Domain.Model", "src\Infnet.Pos.Tcc.Domain.Model\Infnet.Pos.Tcc.Domain.Model.csproj", "{5BFBB082-282C-4BF6-90B5-B6DA0D3EC37E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infnet.Pos.Tcc.Application", "src\Infnet.Pos.Tcc.Application\Infnet.Pos.Tcc.Application.csproj", "{ADBE2EE6-A578-4E6E-8329-BFF710BBDC1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infnet.Pos.Tcc.Application", "src\Infnet.Pos.Tcc.Application\Infnet.Pos.Tcc.Application.csproj", "{ADBE2EE6-A578-4E6E-8329-BFF710BBDC1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infnet.Pos.Tcc.Infrastructure.IoC", "src\Infnet.Pos.Tcc.Infrastructure.IoC\Infnet.Pos.Tcc.Infrastructure.IoC.csproj", "{AC9A396C-E7AD-44DE-B2B8-9E748417A6B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2F17CA0-6637-4BA9-A038-4E86114E5C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2F17CA0-6637-4BA9-A038-4E86114E5C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2F17CA0-6637-4BA9-A038-4E86114E5C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,21 +55,22 @@ Global
 		{ADBE2EE6-A578-4E6E-8329-BFF710BBDC1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADBE2EE6-A578-4E6E-8329-BFF710BBDC1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADBE2EE6-A578-4E6E-8329-BFF710BBDC1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC9A396C-E7AD-44DE-B2B8-9E748417A6B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC9A396C-E7AD-44DE-B2B8-9E748417A6B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC9A396C-E7AD-44DE-B2B8-9E748417A6B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC9A396C-E7AD-44DE-B2B8-9E748417A6B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2} = {2731A409-64FD-42D7-9144-CB4C3079337E}
 		{C2F17CA0-6637-4BA9-A038-4E86114E5C54} = {88A5DBC9-6FA1-4B75-A4E9-D313911E0976}
 		{67151AE8-267B-47DD-B3B6-4F508317EDE5} = {88A5DBC9-6FA1-4B75-A4E9-D313911E0976}
 		{6E1D323B-B2A9-4032-A86B-7A3218E77E56} = {800E02E0-65B9-442F-8D15-ADFE0248479B}
 		{5BFBB082-282C-4BF6-90B5-B6DA0D3EC37E} = {800E02E0-65B9-442F-8D15-ADFE0248479B}
 		{ADBE2EE6-A578-4E6E-8329-BFF710BBDC1D} = {49D8E00A-C4E6-462B-A56D-4FCEF0E0A788}
-		{5042CCA4-D9F5-4E61-B2DE-3F72A65EBCB2} = {2731A409-64FD-42D7-9144-CB4C3079337E}
+		{AC9A396C-E7AD-44DE-B2B8-9E748417A6B4} = {88A5DBC9-6FA1-4B75-A4E9-D313911E0976}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE33970D-86A3-415C-9586-3236C2EE456E}

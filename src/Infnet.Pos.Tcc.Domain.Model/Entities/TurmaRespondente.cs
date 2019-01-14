@@ -1,10 +1,12 @@
-﻿namespace Infnet.Pos.Tcc.Domain.Model.Entities
+﻿using System;
+
+namespace Infnet.Pos.Tcc.Domain.Model.Entities
 {
     public class TurmaRespondente : BaseEntity
     {
-        public int TurmaId { get; set; }
+        public Guid TurmaId { get; set; }
         public Turma Turma { get; set; }
-        public int RespondenteId { get; set; }
+        public Guid RespondenteId { get; set; }
         public Respondente Respondente { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Infnet.Pos.Tcc.Presentation.AdminMvc.Data;
+﻿using Infnet.Pos.Tcc.Infrastructure.IoC;
+using Infnet.Pos.Tcc.Presentation.AdminMvc.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -38,6 +39,8 @@ namespace Infnet.Pos.Tcc.Presentation.AdminMvc
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            NativeInjectorBootstrapper.RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
