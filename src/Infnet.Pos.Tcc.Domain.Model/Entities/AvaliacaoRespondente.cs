@@ -1,16 +1,8 @@
 ﻿using System;
+using Infnet.Pos.Tcc.Infrastructure.CrossCutting.Enums;
 
 namespace Infnet.Pos.Tcc.Domain.Model.Entities
 {
-    //TODO: refatorar enum StatusEmail para Infrastructure.CrossCutting
-    //criar Infrastructure.IoC para injeções
-    public enum StatusEmail
-    {
-        AguardandoEnvio,
-        Enviado,
-        Erro
-    }
-
     public class AvaliacaoRespondente : BaseEntity
     {
         public Guid AvaliacaoId { get; set; }

@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infnet.Pos.Tcc.Application\Infnet.Pos.Tcc.Application.csproj" />
+    <ProjectReference Include="..\Infnet.Pos.Tcc.Domain.Service\Infnet.Pos.Tcc.Domain.Service.csproj" />
     <ProjectReference Include="..\Infnet.Pos.Tcc.Infrastructure.Data\Infnet.Pos.Tcc.Infrastructure.Data.csproj" />
   </ItemGroup>
 

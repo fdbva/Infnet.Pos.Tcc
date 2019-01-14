@@ -12,7 +12,7 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.EntitiesConfiguration
 
             builder.HasOne(x => x.Avaliacao)
                 .WithMany(x => x.AvaliacaoQuestoes)
-                .HasForeignKey(x=>x.AvaliacaoId);
+                .HasForeignKey(x => x.AvaliacaoId);
         }
     }
 }

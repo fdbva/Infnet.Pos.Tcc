@@ -16,10 +16,7 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
                     Abertura = table.Column<DateTime>(nullable: false),
                     Fechamento = table.Column<DateTime>(nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Avaliacoes", x => x.Id);
-                });
+                constraints: table => { table.PrimaryKey("PK_Avaliacoes", x => x.Id); });
 
             migrationBuilder.CreateTable(
                 name: "Cursos",
@@ -28,10 +25,7 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
                     Id = table.Column<Guid>(nullable: false),
                     Descricao = table.Column<string>(nullable: true)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cursos", x => x.Id);
-                });
+                constraints: table => { table.PrimaryKey("PK_Cursos", x => x.Id); });
 
             migrationBuilder.CreateTable(
                 name: "GrupoQuestoes",
@@ -41,10 +35,7 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
                     Codigo = table.Column<string>(nullable: true),
                     Descricao = table.Column<string>(nullable: true)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_GrupoQuestoes", x => x.Id);
-                });
+                constraints: table => { table.PrimaryKey("PK_GrupoQuestoes", x => x.Id); });
 
             migrationBuilder.CreateTable(
                 name: "Professores",
@@ -54,10 +45,7 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
                     Cpf = table.Column<int>(nullable: false),
                     Nome = table.Column<string>(nullable: true)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Professores", x => x.Id);
-                });
+                constraints: table => { table.PrimaryKey("PK_Professores", x => x.Id); });
 
             migrationBuilder.CreateTable(
                 name: "Respondentes",
@@ -67,10 +55,7 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
                     Cpf = table.Column<string>(nullable: true),
                     Nascimento = table.Column<DateTime>(nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Respondentes", x => x.Id);
-                });
+                constraints: table => { table.PrimaryKey("PK_Respondentes", x => x.Id); });
 
             migrationBuilder.CreateTable(
                 name: "RespostasAvaliacoesLog",
@@ -91,10 +76,7 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
                     BlocoDescricao = table.Column<string>(nullable: true),
                     CursoDescricao = table.Column<string>(nullable: true)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RespostasAvaliacoesLog", x => x.Id);
-                });
+                constraints: table => { table.PrimaryKey("PK_RespostasAvaliacoesLog", x => x.Id); });
 
             migrationBuilder.CreateTable(
                 name: "AvaliacaoQuestoes",
