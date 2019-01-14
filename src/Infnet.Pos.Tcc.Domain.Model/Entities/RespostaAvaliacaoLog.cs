@@ -1,18 +1,8 @@
 ﻿using System;
+using Infnet.Pos.Tcc.Infrastructure.CrossCutting.Enums;
 
 namespace Infnet.Pos.Tcc.Domain.Model.Entities
 {
-    //TODO: refatorar enum EscalaLikert para Infrastructure.CrossCutting (e traduzir)
-    //criar Infrastructure.IoC para injeções
-    public enum EscalaLikert
-    {
-        StronglyDisagree,
-        Disagree,
-        Neutral,
-        Agree,
-        StronglyAgree
-    }
-
     public class RespostaAvaliacaoLog : BaseEntity
     {
         public string AvaliacaoCodigo { get; set; }

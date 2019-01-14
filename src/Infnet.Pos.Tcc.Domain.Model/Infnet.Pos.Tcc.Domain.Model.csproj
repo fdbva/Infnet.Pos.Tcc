@@ -11,4 +11,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Infnet.Pos.Tcc.Infrastructure.CrossCutting\Infnet.Pos.Tcc.Infrastructure.CrossCutting.csproj" />
+  </ItemGroup>
+
 </Project>
