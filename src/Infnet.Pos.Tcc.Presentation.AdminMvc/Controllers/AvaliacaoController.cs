@@ -8,6 +8,9 @@ using NonFactors.Mvc.Grid;
 
 namespace Infnet.Pos.Tcc.Presentation.AdminMvc.Controllers
 {
+    //TODO: o Create de Avaliacao tem que ser especial. Na tela de criação deve ser possível escolher as questões (que é de 1-many)
+    // e as turmas (que tbm é 1-many), no entanto, ao escolher as turmas, a tabela de relacionamento que será populada é AvaliacaoRespondente
+    // e não AvaliacaoTurma pois esta não existe.
     public class AvaliacaoController : BaseCrudController<IAvaliacaoAppService, AvaliacaoViewModel>
     {
         private readonly IStringLocalizer<AvaliacaoController> _localizer;

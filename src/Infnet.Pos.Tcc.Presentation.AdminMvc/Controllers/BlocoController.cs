@@ -11,6 +11,7 @@ namespace Infnet.Pos.Tcc.Presentation.AdminMvc.Controllers
     public class BlocoController : BaseCrudController<IBlocoAppService, BlocoViewModel>
     {
         private readonly IStringLocalizer<BlocoController> _localizer;
+        private readonly IStringLocalizer<SharedResource> _sharedLocalizer;
 
         public BlocoController(
             IBlocoAppService appService,
@@ -19,12 +20,13 @@ namespace Infnet.Pos.Tcc.Presentation.AdminMvc.Controllers
             IOptionsMonitor<AvaliacaoOptions> options) : base(appService, sharedLocalizer, options)
         {
             _localizer = localizer;
+            _sharedLocalizer = sharedLocalizer;
         }
 
         protected override void GridConfigureColumns(Grid<BlocoViewModel> grid)
         {
             grid.Columns.Add(x => x.Descricao);
-            grid.Columns.Add(x => x.Curso);
+            grid.Columns.Add(x => x.Curso.Descricao).Titled(_sharedLocalizer["Descrição do Curso"]);
         }
     }
 }

@@ -23,19 +23,19 @@ namespace Infnet.Pos.Tcc.Presentation.AdminMvc.Controllers
 
         protected override void GridConfigureColumns(Grid<RespostaAvaliacaoLogViewModel> grid)
         {
-            grid.Columns.Add(x=>x.AvaliacaoCodigo);
-            grid.Columns.Add(x=>x.Questao);
-            grid.Columns.Add(x=>x.Resposta);
-            grid.Columns.Add(x=>x.ProfessorCpf);
-            grid.Columns.Add(x=>x.ProfessorNome);
-            grid.Columns.Add(x=>x.AlunoCpf);
-            grid.Columns.Add(x=>x.AlunoNome);
-            grid.Columns.Add(x=>x.TurmaDescricao);
-            grid.Columns.Add(x=>x.TurmaInicio);
-            grid.Columns.Add(x=>x.TurmaTermino);
-            grid.Columns.Add(x=>x.ModuloDescricao);
-            grid.Columns.Add(x=>x.BlocoDescricao);
-            grid.Columns.Add(x=>x.CursoDescricao);
+            grid.Columns.Add(x => x.AvaliacaoCodigo);
+            grid.Columns.Add(x => x.Questao);
+            grid.Columns.Add(x => x.Resposta);
+            grid.Columns.Add(x => x.ProfessorCpf);
+            grid.Columns.Add(x => x.ProfessorNome);
+            grid.Columns.Add(x => x.AlunoCpf);
+            grid.Columns.Add(x => x.AlunoNome);
+            grid.Columns.Add(x => x.TurmaDescricao);
+            grid.Columns.Add(x => x.TurmaInicio);
+            grid.Columns.Add(x => x.TurmaTermino);
+            grid.Columns.Add(x => x.ModuloDescricao);
+            grid.Columns.Add(x => x.BlocoDescricao);
+            grid.Columns.Add(x => x.CursoDescricao);
         }
     }
 }

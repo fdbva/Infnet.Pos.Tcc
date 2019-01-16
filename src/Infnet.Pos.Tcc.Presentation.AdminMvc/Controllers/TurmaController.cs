@@ -11,6 +11,7 @@ namespace Infnet.Pos.Tcc.Presentation.AdminMvc.Controllers
     public class TurmaController : BaseCrudController<ITurmaAppService, TurmaViewModel>
     {
         private readonly IStringLocalizer<TurmaController> _localizer;
+        private readonly IStringLocalizer<SharedResource> _sharedLocalizer;
 
         public TurmaController(
             ITurmaAppService appService,
@@ -19,12 +20,13 @@ namespace Infnet.Pos.Tcc.Presentation.AdminMvc.Controllers
             IOptionsMonitor<AvaliacaoOptions> options) : base(appService, sharedLocalizer, options)
         {
             _localizer = localizer;
+            _sharedLocalizer = sharedLocalizer;
         }
 
         protected override void GridConfigureColumns(Grid<TurmaViewModel> grid)
         {
             grid.Columns.Add(x => x.Descricao);
-            grid.Columns.Add(x => x.Modulo);
+            grid.Columns.Add(x => x.Modulo.Descricao).Titled(_sharedLocalizer["Descrição do Módulo"]);
             grid.Columns.Add(x => x.Inicio);
             grid.Columns.Add(x => x.Termino);
         }

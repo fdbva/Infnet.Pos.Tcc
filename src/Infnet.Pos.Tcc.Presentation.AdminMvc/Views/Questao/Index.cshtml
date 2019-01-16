@@ -1,13 +1,13 @@
 ﻿@using Infnet.Pos.Tcc.Application.ViewModels
 @using NonFactors.Mvc.Grid
-@model NonFactors.Mvc.Grid.IGrid<QuestaoViewModel>
+@model NonFactors.Mvc.Grid.IGrid<Infnet.Pos.Tcc.Application.ViewModels.QuestaoViewModel>
 
 @{
     ViewData["Title"] = SharedLocalizer["{0} - {1}", "Questões", "Listar"];
 }
 
 <h1>@ViewData["Title"]</h1>
-<hr />
+<hr/>
 
-<partial name="_CrudIndexHeader" />
+<partial name="_CrudIndexHeader"/>
 @(new HtmlGrid<QuestaoViewModel>(Html, Model))

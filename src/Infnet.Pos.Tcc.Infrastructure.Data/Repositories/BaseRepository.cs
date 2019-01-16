@@ -29,7 +29,8 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Repositories
 
         public virtual async Task<TEntity> FindAsync(Guid id)
         {
-            return await Set.FindAsync(id);
+            var tEntity = await Set.FindAsync(id);
+            return tEntity;
         }
 
         public virtual async Task<IEnumerable<TEntity>> GetAllAsNoTrackingAsync()
@@ -53,7 +54,7 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Repositories
 
         public virtual async Task RemoveAsync(Guid id)
         {
-            Set.Remove(await Set.FindAsync(id));
+            Set.Remove(await FindAsync(id));
         }
 
         public void Dispose()

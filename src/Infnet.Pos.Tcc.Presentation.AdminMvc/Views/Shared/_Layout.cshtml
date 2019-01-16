@@ -68,22 +68,24 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Turma" asp-action="Index">@SharedLocalizer["Turma"]</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Avaliacao" asp-action="Index">@SharedLocalizer["Avaliação"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="RespostaAvaliacaoLog" asp-action="Index">@SharedLocalizer["Relatório"]</a>
+                    </li>
+                </ul>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="TurmaProfessor" asp-action="Index">@SharedLocalizer["Professores das Turmas"]</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="TurmaRespondente" asp-action="Index">@SharedLocalizer["Respondentes das Turmas"]</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Avaliacao" asp-action="Index">@SharedLocalizer["Avaliação"]</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="AvaliacaoQuestao" asp-action="Index">@SharedLocalizer["Questões da Avaliação"]</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="AvaliacaoRespondente" asp-action="Index">@SharedLocalizer["Respondentes da Avaliação"]</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="RespostaAvaliacaoLog" asp-action="Index">@SharedLocalizer["Relatório"]</a>
                     </li>
                 </ul>
             </div>
