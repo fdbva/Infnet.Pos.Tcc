@@ -1,3 +1,6 @@
-﻿@using Infnet.Pos.Tcc.Presentation.AdminMvc
+﻿@using Infnet.Pos.Tcc.Infrastructure.CrossCutting.Resources
+@using Infnet.Pos.Tcc.Presentation.AdminMvc
 @using Infnet.Pos.Tcc.Presentation.AdminMvc.Models
+@using Microsoft.AspNetCore.Mvc.Localization
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IHtmlLocalizer<SharedResource> SharedLocalizer

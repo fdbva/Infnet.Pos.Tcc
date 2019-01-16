@@ -2,7 +2,7 @@
 
 namespace Infnet.Pos.Tcc.Application.ViewModels
 {
-    public class BaseViewModel
+    public abstract class BaseViewModel
     {
         public Guid Id { get; set; }
     }

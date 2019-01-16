@@ -9,6 +9,8 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.EntitiesConfiguration
         public void Configure(EntityTypeBuilder<Respondente> builder)
         {
             builder.HasKey(x => x.Id);
+
+            builder.HasIndex(x => x.Cpf).IsUnique();
         }
     }
 }

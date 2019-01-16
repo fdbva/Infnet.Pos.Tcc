@@ -7,7 +7,7 @@ using Infnet.Pos.Tcc.Domain.Model.Interfaces.Services;
 
 namespace Infnet.Pos.Tcc.Domain.Service.Services
 {
-    public class BaseService<TEntity> : IBaseService<TEntity> where TEntity : BaseEntity
+    public abstract class BaseService<TEntity> : IBaseService<TEntity> where TEntity : BaseEntity
     {
         private readonly IBaseRepository<TEntity> _repository;
 

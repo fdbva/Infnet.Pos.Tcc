@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infnet.Pos.Tcc.Infrastructure.Data.Repositories
 {
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity>, IDisposable where TEntity : BaseEntity
+    public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity>, IDisposable where TEntity : BaseEntity
     {
         protected AvaliacaoContext Ctx { get; }
         protected DbSet<TEntity> Set { get; }

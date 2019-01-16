@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Infnet.Pos.Tcc.Application.AutoMapper;
 using Infnet.Pos.Tcc.Application.ViewModels;
 using Infnet.Pos.Tcc.Domain.Model.Entities;
 using Infnet.Pos.Tcc.Domain.Model.Interfaces.Services;
-using Infnet.Pos.Tcc.Domain.Model.Interfaces.UnitOfWork;
+using Infnet.Pos.Tcc.Domain.Model.Interfaces.UoW;
 
 namespace Infnet.Pos.Tcc.Application.AppServices.Implementations
 {
-    public class BaseAppService<TIService, TEntity, TEntityViewModel> : IBaseAppService<TEntityViewModel>
+    public abstract class BaseAppService<TIService, TEntity, TEntityViewModel> : IBaseAppService<TEntityViewModel>
         where TEntity : BaseEntity
         where TEntityViewModel : BaseViewModel
         where TIService : IBaseService<TEntity>
@@ -27,10 +26,10 @@ namespace Infnet.Pos.Tcc.Application.AppServices.Implementations
             AutoMapper = new Mapper(AutoMapperConfig.RegisterMappings()); // autoMapper;
         }
 
-        public virtual Task<TEntityViewModel> AddAsync(TEntityViewModel obj)
+        public virtual Task<TEntityViewModel> AddAsync(TEntityViewModel tEntityViewModel)
         {
             Uow.BeginTransaction();
-            var ret = _baseService.AddAsync(AutoMapper.Map<TEntity>(obj));
+            var ret = _baseService.AddAsync(AutoMapper.Map<TEntity>(tEntityViewModel));
             Uow.CommitAsync();
             return AutoMapper.Map<Task<TEntityViewModel>>(ret);
         }
@@ -42,13 +41,13 @@ namespace Infnet.Pos.Tcc.Application.AppServices.Implementations
 
         public virtual async Task<IEnumerable<TEntityViewModel>> GetAllAsNoTrackingAsync()
         {
-            return AutoMapper.Map<IQueryable<TEntityViewModel>>(await _baseService.GetAllAsNoTrackingAsync());
+            return AutoMapper.Map<IEnumerable<TEntityViewModel>>(await _baseService.GetAllAsNoTrackingAsync());
         }
 
-        public virtual TEntityViewModel Update(TEntityViewModel obj)
+        public virtual TEntityViewModel Update(TEntityViewModel tEntityViewModel)
         {
             Uow.BeginTransaction();
-            var ret = _baseService.Update(AutoMapper.Map<TEntity>(obj));
+            var ret = _baseService.Update(AutoMapper.Map<TEntity>(tEntityViewModel));
             Uow.Commit();
             return AutoMapper.Map<TEntityViewModel>(ret);
         }
@@ -61,10 +60,10 @@ namespace Infnet.Pos.Tcc.Application.AppServices.Implementations
             return ret;
         }
 
-        public virtual void Remove(TEntityViewModel obj)
+        public virtual void Remove(TEntityViewModel tEntityViewModel)
         {
             Uow.BeginTransaction();
-            _baseService.Remove(AutoMapper.Map<TEntity>(obj));
+            _baseService.Remove(AutoMapper.Map<TEntity>(tEntityViewModel));
             Uow.CommitAsync();
         }
 

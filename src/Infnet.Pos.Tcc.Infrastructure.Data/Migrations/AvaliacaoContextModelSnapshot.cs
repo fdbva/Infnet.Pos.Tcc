@@ -32,6 +32,10 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
 
                 b.HasKey("Id");
 
+                b.HasIndex("Codigo")
+                    .IsUnique()
+                    .HasFilter("[Codigo] IS NOT NULL");
+
                 b.ToTable("Avaliacoes");
             });
 
@@ -116,6 +120,10 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
 
                 b.HasKey("Id");
 
+                b.HasIndex("Codigo")
+                    .IsUnique()
+                    .HasFilter("[Codigo] IS NOT NULL");
+
                 b.ToTable("GrupoQuestoes");
             });
 
@@ -146,6 +154,9 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
 
                 b.HasKey("Id");
 
+                b.HasIndex("Cpf")
+                    .IsUnique();
+
                 b.ToTable("Professores");
             });
 
@@ -164,6 +175,10 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
 
                 b.HasKey("Id");
 
+                b.HasIndex("Codigo")
+                    .IsUnique()
+                    .HasFilter("[Codigo] IS NOT NULL");
+
                 b.HasIndex("GrupoQuestaoId");
 
                 b.ToTable("Questoes");
@@ -179,6 +194,10 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Migrations
                 b.Property<DateTime>("Nascimento");
 
                 b.HasKey("Id");
+
+                b.HasIndex("Cpf")
+                    .IsUnique()
+                    .HasFilter("[Cpf] IS NOT NULL");
 
                 b.ToTable("Respondentes");
             });

@@ -1,5 +1,7 @@
-﻿using Infnet.Pos.Tcc.Infrastructure.IoC;
+﻿using Infnet.Pos.Tcc.Infrastructure.CrossCutting.Resources;
+using Infnet.Pos.Tcc.Infrastructure.IoC;
 using Infnet.Pos.Tcc.Presentation.AdminMvc.Data;
+using Infnet.Pos.Tcc.Presentation.AdminMvc.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -38,7 +40,15 @@ namespace Infnet.Pos.Tcc.Presentation.AdminMvc
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc()
+                .AddMvcLocalization(options =>
+                {
+                    options.DataAnnotationLocalizerProvider = (type, factory) =>
+                        factory.Create(typeof(SharedResource));
+                })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.Configure<AvaliacaoOptions>(Configuration.GetSection(nameof(AvaliacaoOptions)));
 
             NativeInjectorBootstrapper.RegisterServices(services);
         }

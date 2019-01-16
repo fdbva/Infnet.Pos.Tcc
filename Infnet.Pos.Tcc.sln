@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infnet.Pos.Tcc.Domain.Model
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infnet.Pos.Tcc.Application", "src\Infnet.Pos.Tcc.Application\Infnet.Pos.Tcc.Application.csproj", "{ADBE2EE6-A578-4E6E-8329-BFF710BBDC1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infnet.Pos.Tcc.Infrastructure.IoC", "src\Infnet.Pos.Tcc.Infrastructure.IoC\Infnet.Pos.Tcc.Infrastructure.IoC.csproj", "{AC9A396C-E7AD-44DE-B2B8-9E748417A6B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infnet.Pos.Tcc.Infrastructure.IoC", "src\Infnet.Pos.Tcc.Infrastructure.IoC\Infnet.Pos.Tcc.Infrastructure.IoC.csproj", "{AC9A396C-E7AD-44DE-B2B8-9E748417A6B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

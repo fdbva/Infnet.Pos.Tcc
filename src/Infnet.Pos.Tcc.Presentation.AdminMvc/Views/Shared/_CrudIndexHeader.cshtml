@@ -1,0 +1,6 @@
+﻿@inject IHtmlLocalizer<SharedResource> SharedLocalizer
+
+<p>
+    <a asp-action="Create" class="btn btn-info">@SharedLocalizer["Adicionar"]</a>
+    <a class="float-right btn btn-info" asp-action="GerarRelatorio">@SharedLocalizer["Baixar CSV"]</a>
+</p>

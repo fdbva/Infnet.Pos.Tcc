@@ -1,0 +1,13 @@
+﻿@using Infnet.Pos.Tcc.Application.ViewModels
+@using NonFactors.Mvc.Grid
+@model NonFactors.Mvc.Grid.IGrid<ProfessorViewModel>
+
+@{
+    ViewData["Title"] = SharedLocalizer["{0} - {1}", "Professores", "Listar"];
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<partial name="_CrudIndexHeader" />
+@(new HtmlGrid<ProfessorViewModel>(Html, Model))
