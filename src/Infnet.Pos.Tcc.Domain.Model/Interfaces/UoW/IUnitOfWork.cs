@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Infnet.Pos.Tcc.Domain.Model.Interfaces.UnitOfWork
+namespace Infnet.Pos.Tcc.Domain.Model.Interfaces.UoW
 {
     public interface IUnitOfWork
     {

@@ -10,6 +10,8 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.EntitiesConfiguration
         {
             builder.HasKey(x => x.Id);
 
+            builder.HasIndex(x => x.Codigo).IsUnique();
+
             builder.HasOne(x => x.GrupoQuestao)
                 .WithMany(x => x.Questoes)
                 .HasForeignKey(x => x.GrupoQuestaoId);

@@ -15,13 +15,14 @@
               crossorigin="anonymous"
               integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>
     </environment>
-    <link rel="stylesheet" href="~/css/site.css"/>
+    <link href="~/lib/MvcGrid/mvc-grid.css" rel="stylesheet" asp-append-version="true"/>
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true"/>
 </head>
 <body>
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Infnet.Pos.Tcc.Presentation.AdminMvc</a>
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@SharedLocalizer["MIT Engenharia de Software - TCC"]</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,30 +30,76 @@
             <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                 <partial name="_LoginPartial"/>
                 <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="GrupoQuestao" asp-action="Index">GrupoQuestao</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
+                    @*<li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>*@
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<div class="container">
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="GrupoQuestao" asp-action="Index">@SharedLocalizer["Grupo de Questão"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Questao" asp-action="Index">@SharedLocalizer["Curso"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Respondente" asp-action="Index">@SharedLocalizer["Respondente"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Professor" asp-action="Index">@SharedLocalizer["Professor"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Curso" asp-action="Index">@SharedLocalizer["Curso"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Bloco" asp-action="Index">@SharedLocalizer["Bloco"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Modulo" asp-action="Index">@SharedLocalizer["Módulo"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Turma" asp-action="Index">@SharedLocalizer["Turma"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Avaliacao" asp-action="Index">@SharedLocalizer["Avaliação"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="RespostaAvaliacaoLog" asp-action="Index">@SharedLocalizer["Relatório"]</a>
+                    </li>
+                </ul>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="TurmaProfessor" asp-action="Index">@SharedLocalizer["Professores das Turmas"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="TurmaRespondente" asp-action="Index">@SharedLocalizer["Respondentes das Turmas"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="AvaliacaoQuestao" asp-action="Index">@SharedLocalizer["Questões da Avaliação"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="AvaliacaoRespondente" asp-action="Index">@SharedLocalizer["Respondentes da Avaliação"]</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <partial name="_CookieConsentPartial"/>
-    <main role="main" class="pb-3">
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
         @RenderBody()
     </main>
 </div>
 
 <footer class="border-top footer text-muted">
     <div class="container">
-        &copy; 2019 - Infnet.Pos.Tcc.Presentation.AdminMvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        &copy; 2019 - MIT em Engenharia de Software .NET - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
     </div>
 </footer>
 
@@ -74,6 +121,8 @@
             integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
     </script>
 </environment>
+<script src="~/lib/MvcGrid/mvc-grid.js" asp-append-version="true"></script>f
+<script src="~/js/site-index-grid.js" asp-append-version="true"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
 
 @RenderSection("Scripts", required: false)

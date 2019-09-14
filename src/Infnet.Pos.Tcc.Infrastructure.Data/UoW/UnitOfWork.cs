@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Infnet.Pos.Tcc.Domain.Model.Interfaces.UnitOfWork;
+using Infnet.Pos.Tcc.Domain.Model.Interfaces.UoW;
 using Infnet.Pos.Tcc.Infrastructure.Data.Context;
 
 namespace Infnet.Pos.Tcc.Infrastructure.Data.UoW
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
         private readonly AvaliacaoContext _context;
         private bool _disposed;

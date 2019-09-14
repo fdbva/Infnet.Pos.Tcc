@@ -35,7 +35,7 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Context
 
             //optionsBuilder.UseSqlServer(config.GetConnectionString("EvaluationLocalMsSql"));
             optionsBuilder.UseSqlServer(
-                "Server=sqlexpress01;Database=tccAvaliacao;Trusted_Connection=True;MultipleActiveResultSets=true");
+                @"Server=06-21738\DEVDRE;Database=tccAvaliacao;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

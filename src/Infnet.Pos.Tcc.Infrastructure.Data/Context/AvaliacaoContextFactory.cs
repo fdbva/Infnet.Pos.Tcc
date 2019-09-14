@@ -10,7 +10,7 @@ namespace Infnet.Pos.Tcc.Infrastructure.Data.Context
             //TODO: resolver acesso a banco e connection strings
             var optionsBuilder = new DbContextOptionsBuilder<AvaliacaoContext>();
             optionsBuilder.UseSqlServer(
-                "Server=sqlexpress01;Database=tccAvaliacao;Trusted_Connection=True;MultipleActiveResultSets=true");
+                @"Server=06-21738\DEVDRE;Database=tccAvaliacao;Trusted_Connection=True;MultipleActiveResultSets=true");
 
             return new AvaliacaoContext(optionsBuilder.Options);
         }

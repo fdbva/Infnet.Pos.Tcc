@@ -1,13 +1,13 @@
-﻿@model Infnet.Pos.Tcc.Domain.Model.Entities.GrupoQuestao
+﻿@model Infnet.Pos.Tcc.Application.ViewModels.GrupoQuestaoViewModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = SharedLocalizer["{0} - {1}", "Grupo de Questão", "Detalhe"];
 }
 
-<h1>Details</h1>
+<h1>@ViewData["Title"]</h1>
+<hr/>
 
 <div>
-    <h4>GrupoQuestao</h4>
     <hr/>
     <dl class="row">
         <dt class="col-sm-2">
@@ -25,6 +25,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">@SharedLocalizer["Editar"]</a>
+    <a asp-action="Index" class="btn btn-secondary">@SharedLocalizer["Voltar"]</a>
 </div>

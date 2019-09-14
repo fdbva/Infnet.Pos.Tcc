@@ -1,0 +1,13 @@
+﻿@using Infnet.Pos.Tcc.Application.ViewModels
+@using NonFactors.Mvc.Grid
+@model NonFactors.Mvc.Grid.IGrid<Infnet.Pos.Tcc.Application.ViewModels.TurmaViewModel>
+
+@{
+    ViewData["Title"] = SharedLocalizer["{0} - {1}", "Turmas", "Listar"];
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr/>
+
+<partial name="_CrudIndexHeader"/>
+@(new HtmlGrid<TurmaViewModel>(Html, Model))

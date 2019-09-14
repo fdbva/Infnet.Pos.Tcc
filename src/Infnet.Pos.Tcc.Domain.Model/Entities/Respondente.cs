@@ -6,6 +6,7 @@ namespace Infnet.Pos.Tcc.Domain.Model.Entities
     public class Respondente : BaseEntity
     {
         public string Cpf { get; set; }
+        public string Nome { get; set; }
         public DateTime Nascimento { get; set; }
         public ICollection<AvaliacaoRespondente> AvaliacoesRespondente { get; set; }
         public ICollection<TurmaRespondente> TurmasRespondente { get; set; }

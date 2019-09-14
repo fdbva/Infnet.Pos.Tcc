@@ -3,25 +3,36 @@ using System.Linq;
 using System.Threading.Tasks;
 using Infnet.Pos.Tcc.Application.AppServices;
 using Infnet.Pos.Tcc.Application.ViewModels;
+using Infnet.Pos.Tcc.Infrastructure.CrossCutting.Resources;
+using Infnet.Pos.Tcc.Presentation.AdminMvc.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
+using Microsoft.Extensions.Options;
 
 namespace Infnet.Pos.Tcc.Presentation.AdminMvc.Controllers
 {
-    public class BaseCrudController<TIAppService, TEntityViewModel> : Controller
+    public abstract class BaseCrudController<TIAppService, TEntityViewModel> : BaseGridController<TIAppService, TEntityViewModel>
         where TEntityViewModel : BaseViewModel
         where TIAppService : IBaseAppService<TEntityViewModel>
     {
         private readonly TIAppService _appService;
+        private readonly IStringLocalizer<SharedResource> _sharedLocalizer;
+        private readonly IOptionsMonitor<AvaliacaoOptions> _options;
 
-        protected BaseCrudController(TIAppService context)
+        protected BaseCrudController(
+            TIAppService appService,
+            IStringLocalizer<SharedResource> sharedLocalizer,
+            IOptionsMonitor<AvaliacaoOptions> options) : base(appService, sharedLocalizer, options)
         {
-            _appService = context;
+            _appService = appService;
+            _sharedLocalizer = sharedLocalizer;
+            _options = options;
         }
 
         public virtual async Task<IActionResult> Index()
         {
-            return View(await _appService.GetAllAsNoTrackingAsync());
+            return View(await CriarGridIndex());
         }
 
         public virtual async Task<IActionResult> Details(Guid? id)

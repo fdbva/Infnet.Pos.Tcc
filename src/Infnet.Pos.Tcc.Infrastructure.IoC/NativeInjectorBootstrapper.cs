@@ -3,7 +3,7 @@ using Infnet.Pos.Tcc.Application.AppServices;
 using Infnet.Pos.Tcc.Application.AppServices.Implementations;
 using Infnet.Pos.Tcc.Domain.Model.Interfaces.Repositories;
 using Infnet.Pos.Tcc.Domain.Model.Interfaces.Services;
-using Infnet.Pos.Tcc.Domain.Model.Interfaces.UnitOfWork;
+using Infnet.Pos.Tcc.Domain.Model.Interfaces.UoW;
 using Infnet.Pos.Tcc.Domain.Service.Services;
 using Infnet.Pos.Tcc.Infrastructure.Data.Context;
 using Infnet.Pos.Tcc.Infrastructure.Data.Repositories;
